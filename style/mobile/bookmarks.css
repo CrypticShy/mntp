@@ -1,0 +1,52 @@
+/* Mobile Devices */
+
+@media only screen and (device-width: 800px),
+  only screen and (max-width: 800px) {
+  .bookmark {
+  }
+
+  .bookmark-list {
+    position: fixed;
+    height: 315px;
+    width: 280px;
+    left: 80px;
+    right: auto;
+    top: 90px;
+
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .bookmark-list a {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+
+    cursor: pointer;
+    width: 125px;
+  }
+
+  .bookmark-list button {
+    width: 260px;
+  }
+
+  .edit-bookmarks {
+    position: fixed;
+    height: auto;
+    width: 260px;
+    left: 80px;
+    right: auto;
+    top: 12.5px;
+    bottom: auto;
+    padding: 10px 10px 10px 10px;
+  }
+
+  .edit-field input {
+    position: fixed;
+  }
+
+  .edit-button {
+    top: 210px;
+  }
+}

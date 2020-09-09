@@ -1,0 +1,53 @@
+.bookmark-list {
+  position: fixed;
+  height: 315px;
+  width: 370px;
+  left: 80px;
+  bottom: 95px;
+
+  background-color: var(--darktheme);
+  box-shadow: var(--boxshadow);
+  border-radius: var(--borderradius);
+  cursor: pointer;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.bookmark-list a {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+
+  cursor: pointer;
+  width: 160px;
+}
+
+.bookmark-list button {
+  width: 335px;
+}
+
+.edit-bookmarks {
+  position: fixed;
+  background-color: var(--darktheme);
+  width: 350px;
+  height: auto;
+  border-radius: var(--borderradius);
+  bottom: 17.5px;
+  left: 80px;
+  padding: 10px 10px 10px 10px;
+  box-shadow: var(--boxshadow);
+  z-index: 1;
+}
+
+.edit-field input {
+  position: fixed;
+}
+
+.edit-button {
+  bottom: 210px;
+}
+
+.edit-bookmarks .mdc-floating-label--float-above {
+  top: 26.5px;
+}

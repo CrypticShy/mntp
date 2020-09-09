@@ -1,0 +1,39 @@
+.background-box {
+  position: fixed;
+  height: 425px;
+  width: 370px;
+  left: 80px;
+  bottom: 85px;
+  display: none;
+
+  text-align: center;
+  font-size: 30px;
+  color: var(--titlecolor);
+
+  background-color: var(--darktheme);
+  box-shadow: var(--boxshadow);
+  border-radius: var(--borderradius);
+  cursor: default;
+}
+
+.background-list {
+  padding-top: 15px;
+}
+
+.background-box img {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: var(--borderradius);
+  padding: 5px 5px 5px 5px;
+}
+
+.custom-wallpaper {
+  margin-top: 2.5px;
+}
+
+.custom-wallpaper .mdc-text-field {
+  bottom: 2px;
+  width: 260px;
+  margin-right: 3px;
+}

@@ -1,0 +1,105 @@
+:root {
+  --mdc-theme-primary: var(--primary) !important;
+  --mdc-theme-secondary: var(--primary) !important;
+  --mdc-theme-background: var(--backgroundcolor);
+  --mdc-theme-surface: #fff;
+  --mdc-theme-error: #b00020;
+  --mdc-theme-on-primary: #fff;
+  --mdc-theme-on-secondary: #fff;
+  --mdc-theme-on-surface: #000;
+  --mdc-theme-on-error: #fff;
+  --mdc-theme-text-secondary-on-background: rgba(0, 0, 0, 0.54);
+  --mdc-theme-text-hint-on-background: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-disabled-on-background: rgba(0, 0, 0, 0.38);
+  --mdc-theme-text-icon-on-background: rgba(0, 0, 0, 0.38);
+}
+
+/* Text field*/
+.mdc-text-field,
+.mdc-text-field__input,
+.mdc-floating-label {
+  caret-color: var(--textcolor) !important;
+  color: var(--textcolor) !important;
+}
+
+.mdc-notched-outline__leading,
+.mdc-notched-outline__notch,
+.mdc-notched-outline__trailing {
+  border-color: var(--bordercolor) !important;
+}
+
+.mdc-text-field-small {
+  height: 40px !important;
+}
+
+.mdc-text-field-small .mdc-floating-label--float-above {
+    top: 26.5px;
+  }
+
+/* Checkbox*/
+.mdc-form-field > label {
+  color: var(--textcolor) !important;
+}
+
+.mdc-checkbox__background {
+  border-color: var(--bordercolor) !important;
+}
+
+.mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background {
+  border-color: transparent !important;
+}
+
+.mdc-checkbox__checkmark {
+  color: var(--darktheme) !important;
+}
+
+/* Search */
+.rounded .mdc-notched-outline__leading {
+  border-radius: var(--borderradius) 0 0 var(--borderradius) !important;
+  padding-left: 25px;
+}
+
+.rounded .mdc-notched-outline__trailing {
+  border-radius: 0 var(--borderradius) var(--borderradius) 0 !important;
+}
+
+.rounded .mdc-notched-outline__leading,
+.rounded .mdc-notched-outline__notch,
+.rounded .mdc-notched-outline__trailing {
+  border-color: var(--searchbordercolor) !important;
+}
+
+.rounded {
+  width: 380px !important;
+  height: 45px !important;
+  text-align: right;
+  margin-right: -100px !important;
+}
+
+.rounded .mdc-text-field,
+.rounded .mdc-text-field__input,
+.rounded .mdc-floating-label {
+  caret-color: var(--searchtextcolor) !important;
+  color: var(--searchtextcolor) !important;
+}
+
+.rounded .mdc-floating-label--float-above {
+  top: 27px !important;
+}
+
+.mdc-text-field__input {
+  padding-right: 10px !important;
+}
+
+/* Button */
+.mdc-button {
+  color: var(--darktheme) !important;
+}
+
+/* Mobile */
+@media only screen and (device-width: 800px),
+  only screen and (max-width: 800px) {
+.rounded {
+  width: 280px !important;
+}
+}
