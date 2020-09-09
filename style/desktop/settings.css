@@ -1,0 +1,56 @@
+.settings-box {
+  position: fixed;
+  height: 360px;
+  width: 370px;
+  left: 80px;
+  bottom: 85px;
+
+  text-align: center;
+  font-size: 30px;
+  color: var(--titlecolor);
+
+  background-color: var(--darktheme);
+  box-shadow: var(--boxshadow);
+  border-radius: var(--borderradius);
+  cursor: default;
+}
+
+.settings-list {
+  position: fixed;
+  height: auto;
+  width: 10px;
+  left: 85px;
+  bottom: 195px;
+}
+
+.settings-list .mdc-form-field {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: -5px;
+  width: 280px !important;
+  cursor: pointer;
+  width: 160px;
+}
+
+.input-settings-list {
+  position: fixed;
+  left: 85px;
+  bottom: 125px;
+}
+
+.input-settings-list li {
+  padding-bottom: 15px !important;
+}
+
+.input-settings-list {
+  position: fixed;
+  bottom: 85px;
+  left: 95px;
+}
+
+.input-settings-list .mdc-text-field {
+  bottom: 2px;
+  width: 260px;
+  margin-right: 10px;
+}

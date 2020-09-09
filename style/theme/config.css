@@ -1,0 +1,53 @@
+:root {
+  --darktheme: rgba(255, 255, 255, 1);
+  --backgroundhovercolor: rgba(150, 150, 150, 1);
+
+  --titlecolor: rgba(100, 100, 100, 1);
+  --textcolor: rgba(100, 100, 100, 1);
+  --alttextcolor: rgba(0, 0, 0, 1);
+
+  --checkmarkcheckedcolor: rgba(37, 174, 220, 1);
+  --checkmarkbordercolor: rgba(100, 100, 100, 1);
+  
+  --boxshadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  
+  --bordercolor: rgba(100, 100, 100, 1);
+
+  --searchbordercolor: rgba(255, 255, 255, 1);
+  --searchtextcolor: rgba(255, 255, 255, 1);
+
+  --iconcolor: rgba(255, 255, 255, 1);
+
+  --primary: rgba(80, 174, 80, 1);
+  
+  --checkmarkborderradius: 5px;
+  --buttonborderradius: 10px;
+  --borderradius: 10px;
+}
+
+[data-theme="dark"] {
+  --darktheme: rgba(25, 25, 25, 1);
+  --backgroundhovercolor: rgba(45, 45, 45, 1);
+
+  --titlecolor: rgba(150, 150, 150, 1);
+  --textcolor: rgba(255, 255, 255, 1);
+  --alttextcolor: rgba(0, 0, 0, 1);
+
+  --checkmarkcheckedcolor: rgba(80, 174, 80, 1);
+  --checkmarkbordercolor: rgba(100, 100, 100, 1);
+  
+  --boxshadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+  --bordercolor: rgba(255, 255, 255, 1);
+  
+  --searchbordercolor: rgba(255, 255, 255, 1);
+  --searchtextcolor: rgba(255, 255, 255, 1);
+
+  --iconcolor: rgba(255, 255, 255, 1);
+  
+  --primary: rgba(80, 174, 80, 1);
+  
+  --checkmarkborderradius: 5px;
+  --buttonborderradius: 10px;
+  --borderradius: 10px;
+}

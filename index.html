@@ -1,0 +1,343 @@
+<html id="html" lang="en">
+  
+  <head>
+    
+    <title>New Tab</title>
+    
+    <meta name="description" content="Material NTP by Sushy"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#252525">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1 user-scalable=0"/>
+    
+    <link rel="icon" href="https://cdn.glitch.com/3cedcc53-fa6b-499c-bcb3-bd3c205a0c91%2Fnewtab-icon.png?v=1575724865275">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <script src="https://unpkg.com/material-components-web@3.2.0/dist/material-components-web.min.js"></script>
+    
+    <link rel="stylesheet" href="style/desktop/body.css">
+    <link rel="stylesheet" href="style/desktop/bookmarks.css">
+    <link rel="stylesheet" href="style/desktop/search.css">
+    <link rel="stylesheet" href="style/desktop/background.css">
+    <link rel="stylesheet" href="style/desktop/settings.css">
+    
+    <link rel="stylesheet" href="style/theme/config.css">
+    <link rel="stylesheet" href="style/theme/material.css">
+    
+    <link rel="stylesheet" href="style/mobile/body.css">
+    <link rel="stylesheet" href="style/mobile/bookmarks.css">
+    <link rel="stylesheet" href="style/mobile/search.css">
+    <link rel="stylesheet" href="style/mobile/background.css">
+    <link rel="stylesheet" href="style/mobile/settings.css">
+    
+    <script src="script/load.js" defer></script>
+    <script src="script/open-close.js" defer></script>
+    <script src="script/bookmarks.js" defer></script>
+    <script src="script/background.js" defer></script>
+    <script src="script/settings.js" defer></script>
+    <script src="script/material.js" defer></script>
+    <script src="script/search.js" defer></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154194229-1"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-154194229-1');</script>
+    <meta name="google-site-verification" content="myNmJOz8MgifnCcoDEXZQdDnvz_wawkINewQHqVceFI" />
+    
+  </head>  
+ 
+  <body>
+
+  <!--bookmark-box bookmark fields-->    
+    <div id="bookmark-box">
+      
+    <div class="bookmark-list">
+      <center> 
+      <a class="mdc-button mdc-button--raised" id="bookmark1"><div class="mdc-button__ripple"></div></a>
+      <a class="mdc-button mdc-button--raised" id="bookmark2"><div class="mdc-button__ripple"></div></a> 
+      <a class="mdc-button mdc-button--raised" id="bookmark3"><div class="mdc-button__ripple"></div></a>  
+      <a class="mdc-button mdc-button--raised" id="bookmark4"><div class="mdc-button__ripple"></div></a>  
+      <a class="mdc-button mdc-button--raised" id="bookmark5"><div class="mdc-button__ripple"></div></a>  
+      <a class="mdc-button mdc-button--raised" id="bookmark6"><div class="mdc-button__ripple"></div></a> 
+      <a class="mdc-button mdc-button--raised" id="bookmark7"><div class="mdc-button__ripple"></div></a>  
+      <a class="mdc-button mdc-button--raised" id="bookmark8"><div class="mdc-button__ripple"></div></a>
+      <a class="mdc-button mdc-button--raised" id="bookmark9"><div class="mdc-button__ripple"></div></a>  
+      <a class="mdc-button mdc-button--raised" id="bookmark10"><div class="mdc-button__ripple"></div></a>  
+      <a class="mdc-button mdc-button--raised" id="bookmark11"><div class="mdc-button__ripple"></div></a>  
+      <a class="mdc-button mdc-button--raised" id="bookmark12"><div class="mdc-button__ripple"></div></a>
+      <a class="mdc-button mdc-button--raised" id="bookmark13"><div class="mdc-button__ripple"></div></a>  
+      <a class="mdc-button mdc-button--raised" id="bookmark14"><div class="mdc-button__ripple"></div><i class="material-icons mdc-button__icon" aria-hidden="true">favorite</i></a>
+      </center>
+    </div>
+    
+    <div class="toggle-buttons">
+      <button class="mdc-fab edit-button" onclick="EditBookmark()"><div class="mdc-fab__ripple"></div><span class="mdc-fab__icon material-icons">edit</span></button>  
+    </div>
+       
+ <div class="edit-bookmarks" style="display:none" id="bookmark-edit-box">
+ <center>
+
+ <div class="mdc-text-field mdc-text-field--outlined edit-field mdc-text-field-small"  id="bookmark-number">
+ <input class="mdc-text-field__input" id="number" autocomplete="off">
+ <div class="mdc-notched-outline">
+ <div class="mdc-notched-outline__leading"></div>
+ <div class="mdc-notched-outline__notch">
+ <label for="bookmark-number" class="mdc-floating-label">Bookmark Number</label>
+ </div>
+ <div class="mdc-notched-outline__trailing"></div>
+ </div></div>
+   
+ <div class="mdc-text-field mdc-text-field--outlined edit-field mdc-text-field-small" id="bookmark-url" style="display:none">
+ <input class="mdc-text-field__input" id="url" autocomplete="off">
+ <div class="mdc-notched-outline">
+ <div class="mdc-notched-outline__leading"></div>
+ <div class="mdc-notched-outline__notch">
+ <label for="bookmark-number" class="mdc-floating-label">Bookmark URL</label>
+ </div>
+ <div class="mdc-notched-outline__trailing"></div>
+ </div></div>
+   
+ <div class="mdc-text-field mdc-text-field--outlined edit-field mdc-text-field-small" id="bookmark-name" style="display:none">
+ <input class="mdc-text-field__input" id="name" autocomplete="off">
+ <div class="mdc-notched-outline">
+ <div class="mdc-notched-outline__leading"></div>
+ <div class="mdc-notched-outline__notch">
+ <label for="bookmark-number" class="mdc-floating-label">Bookmark Name</label>
+ </div>
+ <div class="mdc-notched-outline__trailing"></div>
+ </div></div>
+ </center>
+ </div>     
+  
+    </div>
+
+  <!--Background selection menu-->    
+  <div class="background-box" id="background-box">
+    <div class="background-list">
+     <center>
+      <img id="background1" class="background-preview" onmouseover="Background1()" onclick="SelectBackground()" src="https://cdn.glitch.com/c72ff2a7-bdf5-40fb-9b71-f4f340db2304%2Fimg4.jpg?v=1576871610796">
+      <img id="background2" class="background-preview" onmouseover="Background2()" onclick="SelectBackground()" src="https://cdn.glitch.com/c72ff2a7-bdf5-40fb-9b71-f4f340db2304%2Fimg5.jpg?v=1576871611855">
+      <img id="background3" class="background-preview" onmouseover="Background3()" onclick="SelectBackground()" src="https://cdn.glitch.com/c72ff2a7-bdf5-40fb-9b71-f4f340db2304%2Fimg2.jpg?v=1576871612038">
+      <img id="background4" class="background-preview" onmouseover="Background4()" onclick="SelectBackground()" src="https://cdn.glitch.com/c72ff2a7-bdf5-40fb-9b71-f4f340db2304%2Fimg6.jpg?v=1576871610586">
+      <img id="background5" class="background-preview" onmouseover="Background5()" onclick="SelectBackground()" src="https://cdn.glitch.com/c72ff2a7-bdf5-40fb-9b71-f4f340db2304%2Fimg8.jpg?v=1576871611035">
+      <img id="background6" class="background-preview" onmouseover="Background6()" onclick="SelectBackground()" src="https://cdn.glitch.com/c72ff2a7-bdf5-40fb-9b71-f4f340db2304%2Fimg9.jpg?v=1576871611715">
+      <img id="background7" class="background-preview" onmouseover="Background7()" onclick="SelectBackground()" src="https://cdn.glitch.com/c72ff2a7-bdf5-40fb-9b71-f4f340db2304%2Fimg3.jpg?v=1576871612142">
+      <img id="background8" class="background-preview" onmouseover="Background8()" onclick="SelectBackground()" src="https://cdn.glitch.com/c72ff2a7-bdf5-40fb-9b71-f4f340db2304%2Fimg7.jpg?v=1576871611703">
+      <img id="background9" class="background-preview" onmouseover="Background9()" onclick="SelectBackground()" src="https://cdn.glitch.com/c72ff2a7-bdf5-40fb-9b71-f4f340db2304%2Fimg1.jpg?v=1576871611181">
+     </center>
+    
+    </div>
+    
+    <div class="custom-wallpaper">
+    <li>
+    <div class="mdc-text-field mdc-text-field--outlined mdc-text-field-small">
+    <input type="text" id="CustomBackground" class="mdc-text-field__input" autocomplete="off">
+    <div class="mdc-notched-outline">
+    <div class="mdc-notched-outline__leading"></div>
+    <div class="mdc-notched-outline__notch">
+    <label for="CustomBackground" class="mdc-floating-label">Wallpaper URL</label>
+    </div>
+    <div class="mdc-notched-outline__trailing"></div>
+    </div>
+    </div>
+    
+    <button class="mdc-button mdc-button--raised" onclick="SetCustomBackground()">Set
+    <div class="mdc-button__ripple"></div>
+    </button> 
+    </li> 
+    
+    </div>
+    
+  </div>
+
+  <!-- Settings --> 
+  <div id="settings-box">
+    
+  <div class="settings-box" onkeypress="EditBookmark();">
+    
+  <div class="settings-list">
+   
+  <div class="mdc-form-field unselectable">
+  <div class="mdc-checkbox">
+    <input type="checkbox"
+           class="mdc-checkbox__native-control"
+           id="setting1"/>
+    <div class="mdc-checkbox__background">
+      <svg class="mdc-checkbox__checkmark"
+           viewbox="0 0 24 24">
+        <path class="mdc-checkbox__checkmark-path"
+              fill="none"
+              d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+      </svg>
+      <div class="mdc-checkbox__mixedmark"></div>
+    </div>
+    <div class="mdc-checkbox__ripple"></div>
+  </div>
+  <label for="checkbox-1">Show Seconds In Clock</label>
+</div>  
+  
+  <div class="mdc-form-field unselectable">
+  <div class="mdc-checkbox">
+    <input type="checkbox"
+           class="mdc-checkbox__native-control"
+           id="setting2"/>
+    <div class="mdc-checkbox__background">
+      <svg class="mdc-checkbox__checkmark"
+           viewbox="0 0 24 24">
+        <path class="mdc-checkbox__checkmark-path"
+              fill="none"
+              d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+      </svg>
+      <div class="mdc-checkbox__mixedmark"></div>
+    </div>
+    <div class="mdc-checkbox__ripple"></div>
+  </div>
+  <label for="checkbox-1">Hide Clock</label>
+</div>
+    
+  <div class="mdc-form-field unselectable">
+  <div class="mdc-checkbox">
+    <input type="checkbox"
+           class="mdc-checkbox__native-control"
+           id="setting3"/>
+    <div class="mdc-checkbox__background">
+      <svg class="mdc-checkbox__checkmark"
+           viewbox="0 0 24 24">
+        <path class="mdc-checkbox__checkmark-path"
+              fill="none"
+              d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+      </svg>
+      <div class="mdc-checkbox__mixedmark"></div>
+    </div>
+    <div class="mdc-checkbox__ripple"></div>
+  </div>
+  <label for="checkbox-1">Hide Cursor</label>
+</div>
+    
+  <div class="mdc-form-field unselectable">
+  <div class="mdc-checkbox">
+    <input type="checkbox"
+           class="mdc-checkbox__native-control"
+           id="setting4"/>
+    <div class="mdc-checkbox__background">
+      <svg class="mdc-checkbox__checkmark"
+           viewbox="0 0 24 24">
+        <path class="mdc-checkbox__checkmark-path"
+              fill="none"
+              d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+      </svg>
+      <div class="mdc-checkbox__mixedmark"></div>
+    </div>
+    <div class="mdc-checkbox__ripple"></div>
+  </div>
+  <label for="checkbox-1">Dark Theme</label>
+</div>
+    
+  <div class="mdc-form-field unselectable">
+  <div class="mdc-checkbox">
+    <input type="checkbox"
+           class="mdc-checkbox__native-control"
+           id="setting5"/>
+    <div class="mdc-checkbox__background">
+      <svg class="mdc-checkbox__checkmark"
+           viewbox="0 0 24 24">
+        <path class="mdc-checkbox__checkmark-path"
+              fill="none"
+              d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+      </svg>
+      <div class="mdc-checkbox__mixedmark"></div>
+    </div>
+    <div class="mdc-checkbox__ripple"></div>
+  </div>
+  <label for="checkbox-1">Dark Clock</label>
+</div>
+    
+  <div class="mdc-form-field unselectable">
+  <div class="mdc-checkbox">
+    <input type="checkbox"
+           class="mdc-checkbox__native-control"
+           id="setting6"/>
+    <div class="mdc-checkbox__background">
+      <svg class="mdc-checkbox__checkmark"
+           viewbox="0 0 24 24">
+        <path class="mdc-checkbox__checkmark-path"
+              fill="none"
+              d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+      </svg>
+      <div class="mdc-checkbox__mixedmark"></div>
+    </div>
+    <div class="mdc-checkbox__ripple"></div>
+  </div>
+  <label for="checkbox-1">Search Blur</label>
+</div>
+
+<div class="mdc-form-field unselectable">
+  <div class="mdc-checkbox">
+    <input type="checkbox"
+           class="mdc-checkbox__native-control"
+           id="setting7"/>
+    <div class="mdc-checkbox__background">
+      <svg class="mdc-checkbox__checkmark"
+           viewbox="0 0 24 24">
+        <path class="mdc-checkbox__checkmark-path"
+              fill="none"
+              d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+      </svg>
+      <div class="mdc-checkbox__mixedmark"></div>
+    </div>
+    <div class="mdc-checkbox__ripple"></div>
+  </div>
+  <label for="checkbox-1">Open Search In New Tab</label>
+</div>
+    
+  </div>
+  
+  <div class="input-settings-list">
+  
+  <li>
+  <div class="mdc-text-field mdc-text-field--outlined mdc-text-field-small">
+  <input type="text" id="accent-color" class="mdc-text-field__input" autocomplete="off">
+  <div class="mdc-notched-outline">
+  <div class="mdc-notched-outline__leading"></div>
+  <div class="mdc-notched-outline__notch">
+  <label for="CustomBackground" class="mdc-floating-label">Hex Color</label>
+  </div>
+  <div class="mdc-notched-outline__trailing"></div>
+  </div>
+  </div>
+    
+  <button class="mdc-button mdc-button--raised color-set" onclick="SetAccentColor()">Set
+  <div class="mdc-button__ripple"></div>
+  </button>
+  </li> 
+    
+  </div>
+  
+  </div>
+  
+  </div>
+
+  <!--Time-->
+  <h1 id="time" class="bold time unselectable"></h1>
+    
+  <!--Google Search box-->  
+  <div class="mdc-text-field text-field rounded mdc-text-field--outlined mdc-text-field--with-trailing-icon search-box" id="search-box">
+      <input type="text" id="search" class="mdc-text-field__input" autocomplete="off">
+      <button class="material-icons search-icon" onclick="Search()">search</button>
+      <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+      <div class="mdc-notched-outline__leading"></div>
+      <div class="mdc-notched-outline__notch" style="">
+      <label class="mdc-floating-label" for="search" style="">Search</label>
+      </div>
+      <div class="mdc-notched-outline__trailing">
+      </div></div></div>
+      
+  <!--Menu FABs-->
+    <div class="toggle-buttons" id="toggle-buttons">
+      <button class="mdc-fab" onclick="OCSettings();"><div class="mdc-fab__ripple"></div><span class="mdc-fab__icon material-icons">settings</span></button>
+      <button class="mdc-fab" onclick="OCBackgrounds();"><div class="mdc-fab__ripple"></div><span class="mdc-fab__icon material-icons">wallpaper</span></button>
+      <button class="mdc-fab" onclick="OCBookmarks();"><div class="mdc-fab__ripple"></div><span class="mdc-fab__icon material-icons">bookmarks</span></button>
+    </div>
+    
+  </body>
+</html>

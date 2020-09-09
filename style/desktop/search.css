@@ -1,0 +1,21 @@
+.search-box {
+  position: fixed !important;
+  left: 80px;
+  bottom: 25px;
+  border-radius: 0px !important;
+  min-width: 370px;
+  max-width: 370px;
+  box-shadow: var(--boxshadow);
+}
+
+.search-box.blurred {
+    backdrop-filter: blur(2px) !important;
+}
+
+.search-icon {
+  color: white;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  position: relative;
+}
